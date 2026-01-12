@@ -1,12 +1,32 @@
+
+import java.util.*;
+
 public class SumOfNaturalNumbers {
 
-    // TODO: Create the method public static int NumberSum(int n)
-    // It should calculate and return the sum of first n natural numbers
+    public static int NumberSum(int n){
+	
+	int sum = 0;
 
+        for(int i=1;i<=n;i++){
+		sum+=i;
+	}
 
-        // Inside main method
-        // TODO: Read N using Scanner
-        // TODO: Call NumberSum(N)
-        // TODO: Print the result
-    
+        return sum;
+	
+    }
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int N;
+        System.out.println("Enter the number: ");
+        N = sc.nextInt();
+
+	int s = NumberSum(N);
+
+	System.out.println(s);
+        
+        sc.close();
+    }
 }
